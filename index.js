@@ -2,20 +2,21 @@ import propertyForSaleArr from "/properties/propertyForSaleArr"
 import placeholderPropertyObj from "./properties/placeholderPropertyObj"
 
 function getPropertyHtml(propertyArr = [placeholderPropertyObj]) {
-    return propertyArr.map(function (currentProperty) {
-        return`
-    <section class="card">
-        <img src="/images/${propertyArr.image}">
+    
+    const propertyHtml = propertyArr.map(currentProperty => 
+        `
+        <section class="card">
+        <img src="/images/${currentProperty.image}">
             <div class="card-right">
-                <h2>${propertyArr.propertyLocation}</h2>
-                <h3>${propertyArr.priceGBP}</h3>
-                <p>${propertyArr.comment}</p>
-                <h3>${propertyArr.roomsM2} m&sup2;</h3>
+                <h2>${currentProperty.propertyLocation}</h2>
+                <h3>${currentProperty.priceGBP}</h3>
+                <p>${currentProperty.comment}</p>
+                <h3>${currentProperty.roomsM2} m&sup2;</h3>
             </div>
     </section> 
-
         `
-    }).join('')
+    ).join('')
+    return propertyHtml
     /*
     SUPER CHALLENGE 💪
     
