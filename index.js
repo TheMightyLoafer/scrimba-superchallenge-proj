@@ -46,7 +46,6 @@ function getPropertyHtml(propertyArr = [placeholderPropertyObj]) {
     </section> 
     */
 }
-
 /***** Modify 👇 by adding an argument to the function call ONLY. *****/
 
 
